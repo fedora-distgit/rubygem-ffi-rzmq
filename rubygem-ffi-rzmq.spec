@@ -53,21 +53,20 @@ popd
 
 %files
 %dir %{gem_instdir}
-%{gem_instdir}/.bnsignore
-%exclude %{gem_instdir}/.gitignore
-%exclude %{gem_instdir}/.travis.yml
 %{gem_instdir}/ext
 %{gem_libdir}
-%{gem_instdir}/travis_build_script.sh
-%exclude %{gem_cache}
 %{gem_spec}
+
+%exclude %{gem_instdir}/.*
+%exclude %{gem_instdir}/travis_build_script.sh
+%exclude %{gem_cache}
 
 %files doc
 %doc %{gem_docdir}
 %doc %{gem_instdir}/AUTHORS.txt
-%{gem_instdir}/Gemfile
 %doc %{gem_instdir}/History.txt
 %doc %{gem_instdir}/README.rdoc
+%{gem_instdir}/Gemfile
 %{gem_instdir}/Rakefile
 %{gem_instdir}/examples
 %{gem_instdir}/ffi-rzmq.gemspec
