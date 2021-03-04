@@ -11,8 +11,8 @@ Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
 BuildRequires: ruby(release)
 BuildRequires: rubygems-devel
 BuildRequires: ruby
-# BuildRequires: rubygem(rspec) >= 3.7
-# BuildRequires: rubygem(rspec) < 4
+BuildRequires: rubygem(rspec) >= 3.7
+BuildRequires: rubygem(ffi-rzmq-core)
 BuildArch: noarch
 
 %description
@@ -46,11 +46,9 @@ mkdir -p %{buildroot}%{gem_dir}
 cp -a .%{gem_dir}/* \
         %{buildroot}%{gem_dir}/
 
-
-
 %check
 pushd .%{gem_instdir}
-# rspec spec
+rspec -Ilib spec
 popd
 
 %files
