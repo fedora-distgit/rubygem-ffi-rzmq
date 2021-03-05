@@ -73,5 +73,5 @@ popd
 %{gem_instdir}/spec
 
 %changelog
-* Fri Nov 13 2020 Pavel Valena <pvalena@redhat.com> - 2.0.7-1
+* Fri Mar 5 2021 Jarek Prokop <jprokop@redhat.com> - 2.0.7-1
 - Initial package
